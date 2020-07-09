@@ -9,7 +9,9 @@
 
  install:
      - pip install -U platformio
-     - platformio update
+     - wget https://lowpowerlab.github.io/MoteinoCore/Moteino1.6.1.zip -O /tmp/moteino.zip
+     - unzip /tmp/moteino.zip -d /tmp/
+     - mv /tmp/Moteino-1.6.1/variants/MoteinoMEGA/pins_arduino.h ~/.platformio/packages/framework-arduino-avr/variants/moteinomega
 
  script:
      - platformio run

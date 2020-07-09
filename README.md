@@ -1,4 +1,6 @@
-# RNode Custom Firmware by KC1AWV 
+# RNode Custom Firmware by KC1AWV
+
+[![Build Status](https://travis-ci.org/kc1awv/RNode_Firmware_Custom.svg?branch=master)](https://travis-ci.org/kc1awv/RNode_Firmware_Custom)
 
 This is a customized version of the [RNode](https://unsigned.ip/rnode) firmware, designed for use using the [Moteino MEGA](https://lowpowerlab.com/guide/moteino/) by LowPowerLab, with the RFM95 LoRa Module.
 
@@ -16,7 +18,7 @@ Writing this firmware requires an additional step using rnodeconfigutil, as flas
 - git clone [rnodeconfigutil](https://github.com/markqvist/rnodeconfigutil)
 - Edit rnodeconf/rnodeconf.py
 - Change line 43: `ranges = { 0xA4: [410000000, 525000000, 14], 0xA9: [820000000, 1020000000, 17], 0xE4: [410000000, 525000000, 23] }`
-- Change line 44: `firmware_update_url = "https://github.com/markqvist/RNode_Firmware/raw/master/Precompiled/rnode_firmware_latest.hex"`
+- Change line 44: `firmware_update_url = "https://raw.githubusercontent.com/kc1awv/RNode_Firmware_Custom/master/Precompiled/rnode_custom_latest.hex"`
 - Add line 120: `    MODEL_E4       = 0xE4`
 - Add line 933: `                    if args.model == "e4":`
 - Add line 934: `                        model = ROM.MODEL_E4`
