@@ -1,4 +1,6 @@
-# RNode Custom Firmware by KC1AWV 
+# RNode Custom Firmware by KC1AWV
+
+[![Build Status](https://travis-ci.org/kc1awv/RNode_Firmware_Custom.svg?branch=master)](https://travis-ci.org/kc1awv/RNode_Firmware_Custom)
 
 This is a customized version of the [RNode](https://unsigned.ip/rnode) firmware, designed for use using the [Moteino MEGA](https://lowpowerlab.com/guide/moteino/) by LowPowerLab, with the RFM95 LoRa Module.
 
