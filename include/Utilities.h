@@ -265,9 +265,7 @@ void setCodingRate() {
 
 void setTXPower() {
 	if (radio_online) {
-		if (model == MODEL_A4) LoRa.setTxPower(lora_txp, PA_OUTPUT_RFO_PIN);
-		if (model == MODEL_A9) LoRa.setTxPower(lora_txp, PA_OUTPUT_PA_BOOST_PIN);
-        if (model == MODEL_E4) LoRa.setTxPower(lora_txp, PA_OUTPUT_PA_BOOST_PIN);
+		if (model == MODEL_E4) LoRa.setTxPower(lora_txp, PA_OUTPUT_PA_BOOST_PIN);
 	}
 }
 
@@ -384,7 +382,7 @@ bool eeprom_product_valid() {
 
 bool eeprom_model_valid() {
 	model = EEPROM.read(eeprom_addr(ADDR_MODEL));
-	if (model == MODEL_A4 || model == MODEL_A9 || model == MODEL_E4) {
+	if (model == MODEL_E4) {
 		return true;
 	} else {
 		return false;

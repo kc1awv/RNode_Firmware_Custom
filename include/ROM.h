@@ -4,8 +4,6 @@
 	#define CHECKSUMMED_SIZE 0x0B
 
 	#define PRODUCT_RNODE    0x03
-	#define MODEL_A4         0xA4
-	#define MODEL_A9         0xA9
     #define MODEL_E4         0xB4
 
 	#define ADDR_PRODUCT     0x00
