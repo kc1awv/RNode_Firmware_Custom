@@ -9,7 +9,7 @@ This is a customized version of the [RNode](https://unsigned.ip/rnode) firmware,
 - Config.h pinouts for the RFM95 module installed on the Moteino MEGA
 - Refactor .ino code to .cpp (developing using VSCode / PlatformIO)
 - ROM.h added custom model E4 (0xE4) for Moteino MEGA board with RFM95 LoRa module
-- RNode-Custom.cpp & ROM.h removed references to Mark Qvist's model A4 and A9 due to pin changes and to prevent bad flashes onto real RNodes
+- Utilities.h & ROM.h removed references to Mark Qvist's model A4 and A9 due to pin changes and to prevent bad flashes onto real RNodes
 
 ## Caveat:
 
