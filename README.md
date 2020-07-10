@@ -2,7 +2,11 @@
 
 [![Build Status](https://travis-ci.org/kc1awv/RNode_Firmware_Custom.svg?branch=master)](https://travis-ci.org/kc1awv/RNode_Firmware_Custom)
 
-This is a customized version of the [RNode](https://unsigned.ip/rnode) firmware, designed for use using the [Moteino MEGA](https://lowpowerlab.com/guide/moteino/) by LowPowerLab, with the RFM95 LoRa Module.
+This is a customized version of the [RNode](https://unsigned.io/rnode) firmware, designed for use using the [Moteino MEGA](https://lowpowerlab.com/guide/moteino/) by LowPowerLab, with the RFM95 LoRa Module.
+
+This work is a derivative of the RNode developed and sold by [Mark Qvist](https://unsigned.io). RNode is Copyright by Mark Qvist.
+
+I have no intention of selling or distributing custom RNodes. The assumption here is that you know why you're here, and you know why and how to purchase and build the requisite hardware mentioned in this derivative. Mark Qvist and Steve Miller are not responsible for undesired operation including but not limited to things breaking, catching fire, or collapsing the space-time continuum. You have been warned.
 
 ## Changes made:
 
@@ -13,16 +17,9 @@ This is a customized version of the [RNode](https://unsigned.ip/rnode) firmware,
 
 ## Caveat:
 
-Writing this firmware requires an additional step using rnodeconfigutil, as flashing the firmware to the Moteino MEGA will not write the EEPROM data needed by the device. In addition, rnodeconf.py will need the following modifications for the custom node model:
+Writing this firmware requires an additional step using rnodeconfigutil, as flashing the firmware to the Moteino MEGA will not write the EEPROM data needed by the device.
 
-- git clone [rnodeconfigutil](https://github.com/markqvist/rnodeconfigutil)
-- Edit rnodeconf/rnodeconf.py
-- Change line 43: `ranges = { 0xA4: [410000000, 525000000, 14], 0xA9: [820000000, 1020000000, 17], 0xE4: [410000000, 525000000, 23] }`
-- Change line 44: `firmware_update_url = "https://raw.githubusercontent.com/kc1awv/RNode_Firmware_Custom/master/Precompiled/rnode_custom_latest.hex"`
-- Add line 120: `    MODEL_E4       = 0xE4`
-- Add line 933: `                    if args.model == "e4":`
-- Add line 934: `                        model = ROM.MODEL_E4`
-- Change line 1074: `                    if args.txp != None and (args.txp >= 0 and args.txp <= 23):`
+It is strongly suggested that you use the [customized RNode Configuration tool](https://github.com/kc1awv/rnodecustomconfigutil) for Custom RNode Model E4.
 
 # RNode Firmware
 
