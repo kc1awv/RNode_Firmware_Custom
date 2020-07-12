@@ -269,7 +269,6 @@ void setTXPower() {
 	}
 }
 
-
 void getBandwidth() {
 	if (radio_online) {
 			lora_bw = LoRa.getSignalBandwidth();
